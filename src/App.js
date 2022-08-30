@@ -1,7 +1,27 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Footer } from './Components/Footer';
+import { Header } from './Components/Header';
+import { Home } from './Components/Home';
+import { Login } from './Components/Login/Login';
+import { UserStorage } from './UserContext';
 
+import './App.css';
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <BrowserRouter>
+        <UserStorage>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Login/*" element={<Login />} />
+          </Routes>
+          <Footer />
+        </UserStorage>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
