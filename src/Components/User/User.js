@@ -2,7 +2,7 @@ import React from 'react';
 import { UserHeader } from './UserHeader';
 import { Routes, Route } from 'react-router-dom';
 import { Feed } from '../../Components/Feed/Feed';
-import { UserPhotoPost } from './UserPhotoPost';
+import UserPhotoPost from './UserPhotoPost';
 import { UserStats } from './UserStats';
 
 export const User = () => {
