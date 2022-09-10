@@ -30,7 +30,7 @@
 .photo:hover .vizualizacao{
   display: flex;
 }
-.photo img{
+.photo > div{
   grid-area: 1/1;
 }
 @media(max-width:40rem){

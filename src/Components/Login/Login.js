@@ -6,6 +6,7 @@ import { LoginPasswordReset } from './LoginPasswordReset';
 import LoginForm from './LoginForm';
 import { UserContext } from '../../UserContext';
 import styles from './Login.module.css';
+import { NotFound } from '../NotFound';
 
 export const Login = () => {
   const { login } = useContext(UserContext);
@@ -15,10 +16,11 @@ export const Login = () => {
     <section className={styles.login}>
       <div className={styles.forms}>
         <Routes>
-          <Route exact path="/" element={<LoginForm />} />
-          <Route exact path="criar" element={<LoginCreate />} />
-          <Route exact path="perder" element={<LoginPasswordLost />} />
-          <Route exact path="resetar" element={<LoginPasswordReset />} />
+          <Route path="/" element={<LoginForm />} />
+          <Route path="criar" element={<LoginCreate />} />
+          <Route path="perdeu" element={<LoginPasswordLost />} />
+          <Route path="resetar" element={<LoginPasswordReset />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </section>

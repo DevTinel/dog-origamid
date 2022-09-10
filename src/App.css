@@ -40,8 +40,8 @@ button,input{
   margin:0 auto;
 
 }
-.mainContainerr{
-  margin-top: 4rem;
+.mainContainer{
+  margin-top: 2rem;
 }
 a{
   text-decoration: none;
@@ -78,4 +78,15 @@ a{
     opacity: 1;
     transform: initial;
   }
+}.App{
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem );
+}
+
+.AppBody{
+  flex:1
+}
+.victoryContainr{
+  height: initial !important;
 }
